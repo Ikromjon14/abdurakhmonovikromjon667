@@ -1,0 +1,55 @@
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header_df {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header_boss {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_df_img > img {
+  border-radius: 60%;
+}
+
+.link {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.link li a {
+  text-decoration: none;
+  color: black;
+}
+
+.html2_img {
+  gap: 120px;
+}
+
+.main {
+  margin-top: 50px;
+}
+.main_df {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.footer {
+  margin-top: 100px;
+}
+
+.link_footer {
+  display: flex;
+  gap: 55px;
+
+}
