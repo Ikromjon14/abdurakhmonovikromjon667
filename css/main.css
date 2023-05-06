@@ -1,33 +1,123 @@
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.header_df {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+body {
+  background-color:cadetblue ;
 }
 
-.header_boss {
+.header {
+  height: 80px;
+  background-color: rgb(195, 186, 186);
+  padding: 20px 0;
+  position: relative;
+}
+
+.nav-bar {
   display: flex;
   justify-content: space-between;
 }
 
-.header_df_img > img {
-  border-radius: 60%;
+.nav-bar img {
+  position: relative;
+  top: 10px;
 }
 
-.link {
+ul {
   display: flex;
-  gap: 10px;
   list-style: none;
+  line-height: 35px;
 }
 
-.link li a {
+ul li {
+  margin: 0 20px;
+}
+
+ul li a {
+  position: relative;
+  font-size: 12px;
   text-decoration: none;
   color: black;
+  font-weight: 600px;
+}
+
+ul li a::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background-color: #fff;
+  bottom: -5px;
+  transition: 0.4s transform;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+ul li a:hover:before {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+label #btn,
+label #cancel{
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  font-size: 25px;
+  cursor: pointer;
+  transform: translate(0, -50%);
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  label #btn {
+    display: inline-block;
+  }
+  ul {
+    position: fixed;
+    top: 0px;
+    right: -100%;
+    width: 50%;
+    padding-top: 80px;
+    display: block;
+    line-height: 40px;
+    z-index: 100;
+    height: 100vh;
+    background-color: #000;
+    transition: 1s;
+  }
+
+  ul li {
+    margin-left: 50px;
+  }
+
+  ul li a {
+    font-size: 12px;
+    color: #fff;
+  }
+
+  #check:checked ~ ul {
+    right: 0;
+  }
+  #check:checked ~ label #cancel {
+    display: block;
+    z-index: 101;
+    color: #fff;
+  }
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .html2_img {
@@ -36,20 +126,38 @@
 
 .main {
   margin-top: 50px;
+  display: flex;
 }
+
+.main_img-1{
+  width: 400px;
+  margin: 0 auto;
+}
+
 .main_df {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
+.main_df2{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  right: 1px;
+}
 
 .footer {
-  margin-top: 100px;
+  width: 100%;
+  height: 50px;
+  border-radius: 12px;
+  background-color: rgb(195, 186, 186)  ;
 }
 
 .link_footer {
   display: flex;
   gap: 55px;
-
+  text-align: center;
+  justify-content: center;
+  margin-top: 50px;
 }
