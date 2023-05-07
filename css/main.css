@@ -126,7 +126,7 @@ label #cancel{
 
 .main {
   margin-top: 50px;
-  display: flex;
+  /* display: flex; */
 }
 
 .main_img-1{
